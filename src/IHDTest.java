@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IHDTest {
-    private static IHD ihd;
+    private static IHD ihd; //
 
     @BeforeAll
     static void before(){
