@@ -11,8 +11,14 @@ class IHDTest {
     }
 
     @Test
-    void test() {
+    void startSensorTest() {
         ihd.startSensor();
         assertEquals(3, ihd.outputToSensor, "wrong voltage to sensor");
+    }
+
+    @Test
+    void readSensorTest() {
+        ihd.readSensor();
+        assertEquals(0, ihd.outputToSensor, "wrong voltage to sensor");
     }
 }
