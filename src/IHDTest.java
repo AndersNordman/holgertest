@@ -4,27 +4,18 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-=======
->>>>>>> refs/remotes/origin/holger-branch
 public class IHDTest {
     private static IHD ihd;
     private static Sensor sensor;
 
     @BeforeEach
-<<<<<<< HEAD
     public void beforeEach() {
     	ihd = new IHD();
         sensor = new Sensor();
         ihd.initialize(sensor);
-=======
-    public static void before() { 
-        ihd = new IHD();
-        int a = 1;
->>>>>>> refs/remotes/origin/holger-branch
     }
     
     // IHD_TEST_001
@@ -84,22 +75,14 @@ public class IHDTest {
     // IDH_TEST_004
     @Test
     public void startSensorTest() {
-<<<<<<< HEAD
         ihd.startSensor();
-=======
-        //ihd.startSensor();
->>>>>>> refs/remotes/origin/holger-branch
         assertEquals(3, ihd.outputToSensor, "wrong voltage to sensor");
     }
 
     // IDH_TEST_005
     @Test
     public void readSensorTest() {
-<<<<<<< HEAD
         ihd.listenToSensor();
-=======
-        //ihd.readSensor();
->>>>>>> refs/remotes/origin/holger-branch
         assertEquals(0, ihd.outputToSensor, "wrong voltage to sensor");
     }
 }
