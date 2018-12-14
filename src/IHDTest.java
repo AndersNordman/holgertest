@@ -4,9 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 public class IHDTest {
     private static IHD ihd;
     private static Sensor sensor;
@@ -28,14 +25,14 @@ public class IHDTest {
     	assertEquals(values[2], ihd.getMean(), "output should be average of inputs");
     }
     
-    static Stream<int[]> TEST_001_values(){
-    	return Arrays.stream(new int[][] {
+    static int[][] TEST_001_values(){
+    	return new int[][] {
     			{100, 110, 105}, 
         		{150, 181, 165},
         		{ 30,  40,  35}, 
         		{190, 180, 185},
         		{200, 200, 200}, 
-        		{  0,   0,   0}});
+        		{  0,   0,   0}};
     }
     
     // IHD_TEST_002
@@ -48,11 +45,11 @@ public class IHDTest {
     	assertEquals(values[2], ihd.getMean(), "inputs over 200 should be handled as 200");
     }
     
-    static Stream<int[]> TEST_002_values(){
-    	return Arrays.stream(new int[][] {
+    static int[][] TEST_002_values(){
+    	return new int[][] {
     			{190, 210, 195}, 
         		{220, 190, 195},
-        		{210, 220, 200}}); 
+        		{210, 220, 200}}; 
     }
     
     // IHD_TEST_003
@@ -65,11 +62,11 @@ public class IHDTest {
     	assertEquals(values[2], ihd.getMean(), "inputs under 0 should be handled as 0");
     }
     
-    static Stream<int[]> TEST_003_values(){
-    	return Arrays.stream(new int[][] {
+    static int[][] TEST_003_values(){
+    	return new int[][] {
     			{ 10, -20,  5}, 
         		{-10,  20, 10},
-        		{-10, -20,  0}}); 
+        		{-10, -20,  0}}; 
     }
     
     // IDH_TEST_004
