@@ -32,10 +32,10 @@ public class IHDTest {
     	return Arrays.stream(new int[][] {
     			{100, 110, 105}, 
         		{150, 181, 165},
-        		{30, 40, 35}, 
+        		{ 30,  40,  35}, 
         		{190, 180, 185},
         		{200, 200, 200}, 
-        		{0, 0, 0}});
+        		{  0,   0,   0}});
     }
     
     // IHD_TEST_002
@@ -67,9 +67,9 @@ public class IHDTest {
     
     static Stream<int[]> TEST_003_values(){
     	return Arrays.stream(new int[][] {
-    			{10, -20, 5}, 
-        		{-10, 20, 10},
-        		{-10, -20, 0}}); 
+    			{ 10, -20,  5}, 
+        		{-10,  20, 10},
+        		{-10, -20,  0}}); 
     }
     
     // IDH_TEST_004
