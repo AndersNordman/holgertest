@@ -30,7 +30,7 @@ public class IntegrationTest {
 	public void test() {
 		TestData[] input = new TestData[] {
 			new TestData(20, 30, true), 
-			new TestData(20, 30, false),
+			new TestData(-30, 10, false),
 			new TestData(20, 40, false),
 			new TestData(21, 41, true),
 			new TestData(220, 210, true)
@@ -55,7 +55,6 @@ class TestData {
 	boolean expectedResult;
 	
 	public TestData(int original, int safety, boolean expectedResult) {
-		super();
 		this.original = original;
 		this.safety = safety;
 		this.expectedResult = expectedResult;
