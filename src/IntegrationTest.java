@@ -25,6 +25,7 @@ public class IntegrationTest {
 		ohd.initialize(iads[0], iads[1], iads[2], iads[3], iads[4]);
 	}
 	
+	// Integration_TEST_001
 	@Test
 	public void test() {
 		TestData[] input = new TestData[] {
@@ -32,7 +33,7 @@ public class IntegrationTest {
 			new TestData(20, 30, false),
 			new TestData(20, 40, false),
 			new TestData(21, 41, true),
-			new TestData(100, 85, true)
+			new TestData(220, 210, true)
 		};
 		boolean[] expected = new boolean[5];
 		for(int i = 0; i < 5; i++) {
