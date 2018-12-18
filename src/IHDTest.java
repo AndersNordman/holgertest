@@ -76,7 +76,7 @@ public class IHDTest {
         assertEquals(3, ihd.outputToSensor, "wrong voltage to sensor");
     }
 
-    // IDH_TEST_005
+    // IDH_TEST_006
     @Test
     public void readAfterRestartTest() {
         ihd.startSensor();
