@@ -78,8 +78,11 @@ public class IHDTest {
 
     // IDH_TEST_005
     @Test
-    public void readSensorTest() {
-        ihd.listenToSensor();
-        assertEquals(0, ihd.outputToSensor, "wrong voltage to sensor");
+    public void readAfterRestartTest() {
+        ihd.startSensor();
+        sensor.originalOutput = 100;
+        sensor.safetyOutput = 80;
+        ihd.execute();
+        assertEquals(90, ihd.getMean(), "wrong result after reset");
     }
 }
