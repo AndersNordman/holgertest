@@ -49,4 +49,9 @@ class IADTestData {
 		this.limit = limit;
 		this.expectedOutput = expectedOutput;
 	}
+	
+	@Override
+	public String toString() {
+		return input + ", " + limit + ": " + expectedOutput;
+	}
 }
